@@ -112,3 +112,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 300)); // Delay of 300ms before firing the search
     }
 });
+
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
