@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Debounce function to limit the number of calls to loadCards
+    let debounceTimeout;
+    const debounce = (func, delay) => {
+        return function (...args) {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    };
+
     const loadCards = async (category, searchQuery = '') => {
         const cardContainer = document.getElementById(`${category}-cards`);
         const nsfwToggle = document.getElementById('nsfw-toggle');
@@ -20,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const cardDataArray = [];
 
-                // Load all the cards
+                // Load all the cards for the specific category
                 for (const file of categoryFiles) {
+                    if (file.trim() === "") continue; // Skip empty file names
+
                     try {
                         const res = await fetch(`cards/${category}/${file}`);
                         const data = await res.text();
@@ -57,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const cardHTML = `
                         <a href="${cardData.link}" target="_blank" class="card-link">
                             <div class="card ${nsfwClass}">
-                                <img src="${cardData.logo}" alt="${cardData.name} logo">
+                                <img src="${cardData.logo}" alt="${cardData.name} logo" loading="lazy">
                                 <h3>${cardData.name}</h3>
                                 <p class="description">${cardData.description}</p>
                             </div>
@@ -71,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } catch (error) {
                 console.error("Error fetching cards list:", error);
             }
-        }, 500); // Time to allow fade-out to complete (in milliseconds)
+        }, 200); // Time to allow fade-out to complete (in milliseconds)
     };
 
     // Handle page-specific features
@@ -92,9 +105,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Make search bar visible on products.html
         searchBarLabel.style.display = 'block';
         
-        searchInput.addEventListener('input', () => {
+        // Debounce the search input
+        searchInput.addEventListener('input', debounce(() => {
             const searchQuery = searchInput.value; // Get the search query
             loadCards(currentPage, searchQuery); // Pass the search query to the loadCards function
-        });
+        }, 300)); // Delay of 300ms before firing the search
     }
 });
