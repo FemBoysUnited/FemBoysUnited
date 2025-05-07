@@ -1,0 +1,7 @@
+{
+    "logo": "https://styles.redditmedia.com/t5_2rsc6/styles/communityIcon_xox3rxe65kna1.png",
+    "name": "r/femboys",
+    "description": "Unleash your feminine side! An 18+ subreddit for boys to get naughty.",
+    "link": "https://www.reddit.com/r/FemBoys/",
+    "nsfw": true
+}
