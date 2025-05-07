@@ -1,7 +1,0 @@
-{
-    "logo": "https://f.media-amazon.com/images/I/61YEluoecFL._AC_SX569_.jpg",
-    "name": "Y2k Mini Skirt",
-    "description": "Showing off some thighs huh 😉",
-    "link": "https://www.amazon.com/Avidlove-Pleated-Solid-Lingerie-Sleepwear/dp/B01N0AYGDA?dib=eyJ2IjoiMSJ9.IRBes1VqQmB0vsLwJY0HoHDa13jkrJHU5eWQCLvUBwEglHcitaQvIBTzm8Ip0k5FfUI5zaDqhVc4MUw3rh37Mo2I41J-FXBv5KhfeyGnfO6VeEnw2yTIbBM5SWqEICGJsODKGmWlMQ0SPViKBE9fjSxGDumDxr-eoiowU5ipQ59vFMpbBtSpVIiSVRdzXrv-XXeLG4vjmG7PMdJvFRDjOURzgnGgfVbd8qG0ufvTciZeE0yNPwINhDJFM8A8ha84GGUonLHQmJ18P-x-tZhFBmOVuK-KDYyNbNZyOGa7R6k.zFir4knrEenKWNKMMSLUqpaMzNz4r6m5QMr2DDX1st0&dib_tag=se&keywords=skirt+femboy&qid=1746595676&sr=8-7",
-    "nsfw": true
-}

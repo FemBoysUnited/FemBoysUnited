@@ -1,7 +1,0 @@
-{
-    "logo": "https://styles.redditmedia.com/t5_2qhh7/styles/communityIcon_bo3ze82pkp061.png",
-    "name": "r/lgbt",
-    "description": "A safe space for GSRM (Gender, Sexual, and Romantic Minority) folk to discuss their lives, issues, interests, and passions.",
-    "link": "https://www.reddit.com/r/lgbt/",
-    "nsfw": false
-}

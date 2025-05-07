@@ -1,7 +1,0 @@
-{
-    "logo": "https://styles.redditmedia.com/t5_2titd/styles/communityIcon_zos7vawff2721.PNG",
-    "name": "r/femboy",
-    "description": "A SFW subreddit for feminine boys, androgynous people, enbies, trans people, and anyone who identifies as a femboy!",
-    "link": "https://www.reddit.com/r/femboy/",
-    "nsfw": false
-}

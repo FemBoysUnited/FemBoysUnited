@@ -1,7 +1,0 @@
-{
-    "logo": "https://f.media-amazon.com/images/I/816i1Q1DxPL._AC_SX466_.jpg",
-    "name": "10 Pack Black Choker Necklace",
-    "description": "We love some neck accessories :DDD!!!",
-    "link": "https://www.amazon.com/Paxcoo-CN-01-Velvet-Necklaces-Storage/dp/B01KHV6LV8?crid=2DZ7FSUVRC99B&dib=eyJ2IjoiMSJ9.1r6Djxb64rSmjJEg2NRVcG3YJYLxP13mOle8CdIn3djtCGv5uwm8BOqHN8dHFStgVO7Paiqw-xRDlLLhTqmGBk5rn0DN4n7LtkCszNoxVtFEo5VkQP6aoT9IftPb4G7ty9p2USmlZShUTBWQPSQVWmSzgVZ6xRCfWIJ2dyVKU2jvd5fdHItW6QS2K-h6YoNmtz49opRAoSvdgcdJVldD2WFi6I_vznCHVkcPE2vRzzB33_qmEX-NL6vnmGgj3XFVbNZYNqAESN8fHhrNF3HBk6jatQlkDDz64lyqwi4LfrA.HD89xnC_SmUbElVdgD9crnf5Ijn1S2bNNMrE9__4JQk&dib_tag=se&keywords=chokers&qid=1746585870&sprefix=chokers%2Caps%2C142&sr=8-7",
-    "nsfw": false
-}

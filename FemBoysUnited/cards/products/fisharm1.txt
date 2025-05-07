@@ -1,7 +1,0 @@
-{
-    "logo": "https://f.media-amazon.com/images/I/61x+4y2XwuS._AC_SX679_.jpg",
-    "name": "Fishnet Arm Warmer",
-    "description": "Ouuu cuteeeeeee <3333 :D",
-    "link": "https://www.amazon.com/Fishnet-Gloves-Accessory-Fingerless-Hollow/dp/B08NTCB9YD?crid=2BTW2C6MFGJ9D&dib=eyJ2IjoiMSJ9.GUXr3bJhwsz98LrGuyRPZfDhq2K2Zy7D6Evzd_nFmvrkIR3bgchrxF_fHEkqoLitVcpMaiGKNJIDbFoK2TPsIewQNIx8ObPnXGBJelwMbz70wDl0DY0WEyO-hHoxYAfhL1EzFL-c1lT14ayUoZkrQB2eTFu5hyD7UqM9LjQ0jJnxv-IwonCd4naaiBQpJMVugLqJ-s44QIbZJLy6H_S37OQFZkHOzroYPWqn58w2gnKHdy4UFm1GSCSB_OS5UvabWiDcMk7qqJxeFlCte-f200aXbIAyJuxONK7vHxiXVoQ.SzGSOR8B4IJU-wlQr_nPPTDe3OHXzytE_9TvuU3risU&dib_tag=se&keywords=femboy&qid=1746585807&sprefix=femboy%2Caps%2C133&sr=8-20",
-    "nsfw": false
-}

@@ -1,7 +1,0 @@
-{
-    "logo": "https://styles.redditmedia.com/t5_2vmuo/styles/communityIcon_xt0odp2ips851.jpg?format=pjpg&s=23fdf5c9908a6259c49c5b4be0ad50791d67171c",
-    "name": "r/feminineboys",
-    "description": "A 13+ SFW text-based community to discuss the Femboy experience",
-    "link": "https://www.reddit.com/r/feminineboys/",
-    "nsfw": false
-}

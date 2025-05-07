@@ -1,7 +1,0 @@
-{
-    "logo": "https://f.media-amazon.com/images/I/71Z3Ch02pzL._AC_SX679_.jpg",
-    "name": "Thigh Highs 6 Pack",
-    "description": "Who dosnt like variaty when it comes to thigh highs??? :3 ",
-    "link": "https://www.amazon.com/Aneco-Knee-High-Stocking-Warmer-Cosplay/dp/B07H2WGKVB?crid=303KB3ZB47SDQ&dib=eyJ2IjoiMSJ9.GUXr3bJhwsz98LrGuyRPZfDhq2K2Zy7D6Evzd_nFmvrkIR3bgchrxF_fHEkqoLitWtDekhGqN9UaVIM5sPuDuMKyAvssEt3nkd8A80EYQxWMhn70URz2oPpFmi2Pj09yL1EzFL-c1lT14ayUoZkrQADaZ95fGjme8NrvHLoRwAGg2nVIoEuV1GMxAhKg8Q26iPLnFpZcTscrYsuGaZCk8vfgSU4tGwTTOmr9ODg55HXyFqvSFvPmSturMFEaNgFHioxhXmqDpt-_P3kjDlxuDbQcRS6XZU41EkqQfR2-W2I.FvHeH74qIlPlrFznq4LVWN0ms8HqbP3bD90_gLckYwg&dib_tag=se&keywords=femboy&qid=1746582002&sprefix=femboy%2Caps%2C150&sr=8-8",
-    "nsfw": false
-}

@@ -1,7 +1,0 @@
-{
-    "logo": "https://f.media-amazon.com/images/I/617kak4k52L._AC_SY741_.jpg",
-    "name": "Oversized Hoodie Without Pocket",
-    "description": "IT HAS NO POCKETS!!!!!",
-    "link": "https://www.amazon.com/Trendy-Queen-Oversized-Sweatshirts-Lightweight/dp/B0BMKD16MG?crid=1ZG41D6SZA8Y&dib=eyJ2IjoiMSJ9._ha7jlgsBU-gAiHBnjMNrzt6FyMHKBnT1hL-aLqgL6JeXoZ2xNISJUvrZ6W7IVtglc1DJCA9a0fcopss-K64AHH25dZZIjdwfI9aeqBjJzIjrzp6UwPi9Knh-z9ybN9KTyMXayIxB0CbnjAFp7vkvMB2sLSOx-EvUVHj9Ik1sS7wgYoo2L1fMky85365BOJuHUbJukQ_Obe5H7NfT0emS66I7Vsj4fIjpV8tz0OTTYOoTxfAJgHEk_SNL-uwOGDOpBwXhAKBeyLfGI6j-M7b6Aong7rESO-MLOYN_MSKD9U.l0Vn5lnR2pRVhpNZmt6J6R67UK83tsBn8ZBXOH_0S0E&dib_tag=se&keywords=oversized%2Bhoodies&qid=1746585858&sprefix=oversized%2Bhoodies%2Caps%2C145&sr=8-8&th=1&psc=1",
-    "nsfw": false
-}
