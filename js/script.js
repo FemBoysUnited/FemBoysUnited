@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
         searchInput.addEventListener('input', debounce(() => {
             const searchQuery = searchInput.value; // Get the search query
             loadCards(currentPage, searchQuery); // Pass the search query to the loadCards function
-        }, 300)); // Delay of 300ms before firing the search
+        }, 500)); // Delay of 300ms before firing the search
     }
 });
 
