@@ -1,7 +1,7 @@
 {
-    "logo": "",
-    "name": "",
-    "description": "",
-    "link": "",
+    "logo": "https://example.com/test.png",
+    "name": "Example Title",
+    "description": "Example Description",
+    "link": ""https://examplestore.com/item/example",
     "nsfw": false true
 }
