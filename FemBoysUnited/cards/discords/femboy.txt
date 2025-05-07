@@ -1,0 +1,7 @@
+{
+    "logo": "https://cdn.discordapp.com/icons/470150068062781441/a_5c4106cd9fc8b0555c4393cb700bffef.gif",
+    "name": "Femboy",
+    "description": "An 18+ community of femboys and femboy admirers. Everyone is welcomed! Come say hello!",
+    "link": "https://disboard.org/server/470150068062781441",
+    "nsfw": true
+}

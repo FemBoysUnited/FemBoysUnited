@@ -1,0 +1,7 @@
+{
+    "logo": "",
+    "name": "",
+    "description": "",
+    "link": "",
+    "nsfw": false true
+}

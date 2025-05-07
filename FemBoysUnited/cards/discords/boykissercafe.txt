@@ -1,0 +1,7 @@
+{
+    "logo": "https://cdn.discordapp.com/icons/1091441097915506841/0977e22a033d08f1eea7b29e57fb03db.jpg",
+    "name": "☕Boykisser Café🍰",
+    "description": "The ultimate safe space for LGBTQ+ individuals, femboys, furries, and anyone who loves Boy Kissing!",
+    "link": "https://disboard.org/server/1091441097915506841",
+    "nsfw": false
+}

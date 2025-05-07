@@ -1,0 +1,7 @@
+{
+    "logo": "https://f.media-amazon.com/images/I/71zHd1yONlL._AC_SX679_.jpg",
+    "name": "2 Pack Dolphin Shotts",
+    "description": "The Classic. its a MUST HAVE.",
+    "link": "https://www.amazon.com/URATOT-Cotton-Shorts-Summer-Athletic/dp/B087M4TWPM?crid=2X26U464PUSJ4&dib=eyJ2IjoiMSJ9.bIupjCm6bOiUk27K8H8MiQV0-pWllyVM318zEFzPmi_lvLo_qGr1aqx_JRVUO2leQlaX4wHe8U8mt2h354Mu8acDJfPB515axHETtkLYVbOL-J9rghvVYf2CSff26UAdw_-zC9PGI11VfQLo9Hz5ZZwT1WBYksUmSjgt5ut4pwczqAJD4AZaSNAtt-ZNQK5TAzcJS0KdfrH9vsw34zMAPPhUCIClf0Dlld-BhN2G40OqgE0kLCefLtZ-acpKiaWxRZLxatV14f_pFGDbz6hEL10HSDSqPWy-bV8H28qzhxc.l6eGWXy8F7MK_5XQO5oJUCRZQJdcb35ZeEAvrrv5NG8&dib_tag=se&keywords=dolphin%2BSHorts&qid=1746595700&sprefix=dolphin%2Bshort%2Caps%2C277&sr=8-6&th=1&psc=1",
+    "nsfw": false
+}

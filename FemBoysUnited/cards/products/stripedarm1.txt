@@ -1,0 +1,7 @@
+{
+    "logo": "https://f.media-amazon.com/images/I/61JT4rsJukL._AC_SY741_.jpg",
+    "name": "Striped Arm Warmer",
+    "description": "Classic femboy purchase!",
+    "link": "https://www.amazon.com/Gothic-Warmer-Fingerless-Gloves-Black/dp/B00OAWNW6S?crid=2BTW2C6MFGJ9D&dib=eyJ2IjoiMSJ9.GUXr3bJhwsz98LrGuyRPZfDhq2K2Zy7D6Evzd_nFmvrkIR3bgchrxF_fHEkqoLitVcpMaiGKNJIDbFoK2TPsIewQNIx8ObPnXGBJelwMbz70wDl0DY0WEyO-hHoxYAfhL1EzFL-c1lT14ayUoZkrQB2eTFu5hyD7UqM9LjQ0jJnxv-IwonCd4naaiBQpJMVugLqJ-s44QIbZJLy6H_S37OQFZkHOzroYPWqn58w2gnKHdy4UFm1GSCSB_OS5UvabWiDcMk7qqJxeFlCte-f200aXbIAyJuxONK7vHxiXVoQ.SzGSOR8B4IJU-wlQr_nPPTDe3OHXzytE_9TvuU3risU&dib_tag=se&keywords=femboy&qid=1746585807&sprefix=femboy%2Caps%2C133&sr=8-26&th=1",
+    "nsfw": false
+}   

@@ -1,0 +1,7 @@
+{
+    "logo": "https://f.media-amazon.com/images/I/61e5aE3kxZL._AC_SX679_.jpg",
+    "name": "High Waist Tight Fishnets",
+    "description": "Fishnets always look great, no matter who wears them!!!",
+    "link": "https://www.amazon.com/Charmnight-Fishnet-Stockings-Pantyhose-Black-g5/dp/B07NV4JGTG?crid=2IAI0EAAAWBDJ&dib=eyJ2IjoiMSJ9.yoUr-gRO2So_uw4VxSkj2d7KqXw1RL6_CTozptfQX0yt3a64QT3j5DZGsRmzy0AZ6yacFi339gmo608IyUnNXOVei6ArvLXCX9zoo7au1OZ4Pq0pUgVxu2OsqmYEIK6s_VMsHHAXqyBvMh0uzff5YNJYKa3P-uTEXq18rE5IH6Q14AEVZRESVboGLytZvMLTH5Oewqw-fDyLUHntyyJIfHr-SXhRhpBYAxJGEWuGUkGfAxbnJje9g93m7kPSevZZNtd8SwKzgw_P7yYdzNRNktTX-tVGbH0P2hL_basICLA.eXHEPeSD9k6780sHW8tQzd6K_zBCC7E2bj_7vzOsVrw&dib_tag=se&keywords=fishnets&qid=1746595711&sprefix=fishn%2Caps%2C1184&sr=8-6&th=1&psc=1",
+    "nsfw": true
+}

@@ -1,0 +1,7 @@
+{
+    "logo": "https://f.media-amazon.com/images/I/51O9ocuwGbL._AC_SX466_.jpg",
+    "name": "Blahaj",
+    "description": "The Classic Femboy Stuffy :DD",
+    "link": "https://www.amazon.com/Pillow-31-inch-Childrens-Decoration-Bedtime/dp/B09GVP3MX1?crid=WVGU1EVX5USM&dib=eyJ2IjoiMSJ9.tJXt80wvOJDPjsIhT0R9Ul_NATQHSqxRp_tbHiGgwraldmhYvhd5YAeaP_qg_aKGQIRlXTn85EZB5S6WiFOZ9h6fLsyURNT-xAVAaCnneNo.F7cxVs6JDhCktJyOPEsevzUDJH95wMbfMqHhNDzYM-I&dib_tag=se&keywords=blahja&qid=1746585846&sprefix=blahj%2Caps%2C134&sr=8-2&th=1",
+    "nsfw": false
+}

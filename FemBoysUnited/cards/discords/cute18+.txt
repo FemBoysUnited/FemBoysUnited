@@ -1,0 +1,7 @@
+{
+    "logo": "https://cdn.discordapp.com/icons/638215839450923019/1ee8f093ad97448e499cdf7cd132cfeb.jpg",
+    "name": "Cute 18+",
+    "description": "Welcome to our server, where Cute FEMBOYS, TWINKS, FURRIES, and the vibrant LGBT community come together. Embrace friendships, explore dating possibilities, and indulge in thrilling discussions across a range of channels.",
+    "link": "https://disboard.org/server/638215839450923019",
+    "nsfw": true
+}
