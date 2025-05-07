@@ -642,6 +642,8 @@ details p {
       right: 0;
       width: 100%;
       z-index: 1000;
+      gap: 15px; /* Add this line for vertical spacing */
+      padding: 10px 0; /* Optional: adds space at top and bottom */
     }
   
     .nav-links.active {
