@@ -1,0 +1,7 @@
+{
+    "logo": "https://b.thumbs.redditmedia.com/Kd8XPkBSybMDQ_rpL1GUtL12WLLuADKm4JzC5JmICzc.png",
+    "name": "r/FtM",
+    "description": "Support-based discussion place focused on trans men, trans-masc individuals, and other people assigned female at birth who are trans.",
+    "link": "https://www.reddit.com/r/ftm/",
+    "nsfw": false
+}

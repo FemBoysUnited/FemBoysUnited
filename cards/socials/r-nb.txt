@@ -1,0 +1,7 @@
+{
+    "logo": "https://styles.redditmedia.com/t5_2vcez/styles/communityIcon_6uw9pz1gi79a1.jpg?format=pjpg&s=417860c35fcb19a2b301708199ee02f641d01f0f",
+    "name": "r/NonBinary",
+    "description": "A subreddit for people of every stripe who feel that they don't fit into a preference-binary or gender-binary culture.",
+    "link": "https://www.reddit.com/r/NonBinary/",
+    "nsfw": false
+}

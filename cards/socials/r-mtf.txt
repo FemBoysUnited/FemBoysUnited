@@ -1,0 +1,7 @@
+{
+    "logo": "https://styles.redditmedia.com/t5_2ub9j/styles/communityIcon_ljzse76o3u861.png",
+    "name": "r/MtF",
+    "description": "A subreddit devoted to transgender issues pertaining to male-to-female or trans feminine people.",
+    "link": "https://www.reddit.com/r/MtF/",
+    "nsfw": false
+}
