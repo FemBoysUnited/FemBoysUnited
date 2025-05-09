@@ -1,0 +1,7 @@
+{
+    "logo": "https://cdn.discordapp.com/icons/331882861986840579/a_7aca1187dcaf72f294ac377a5f3052df.webp?size=80&quality=lossless",
+    "name": "Femme Folk",
+    "description": "An LGBTQ+ safe space for people of a feminine persuasion. This is the official discord server for the r/FeminineBoys subreddit.",
+    "link": "https://discord.gg/maroooo",
+    "nsfw": false
+}
