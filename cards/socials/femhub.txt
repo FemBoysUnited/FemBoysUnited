@@ -1,7 +1,7 @@
 {
-    "logo": "https://neoverse.space/content/uploads/photos/2025/05/femy_339e8c0016d4b381bb7b1302c5af8ad5_cropped.png",
+    "logo": "https://femhub.space/content/uploads/photos/2025/05/femy_17dfcefd2e96504e0882da799ae49bf0.png",
     "name": "FemHub",
     "description": "A brand-new, twitter like community-run social media site made exclusively for the femboy community and supporters.",
-    "link": "https://neoverse.space/",
+    "link": "https://femhub.space/",
     "nsfw": false
 }
