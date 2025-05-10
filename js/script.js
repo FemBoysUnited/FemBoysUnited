@@ -122,3 +122,139 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.classList.toggle('active');
     });
   });
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBoOVMdTdTDzWXtLgrv_az_ZvjnoIuNigw",
+  authDomain: "poll-vote-data-1a481.firebaseapp.com",
+  databaseURL: "https://poll-vote-data-1a481-default-rtdb.firebaseio.com",
+  projectId: "poll-vote-data-1a481",
+  storageBucket: "poll-vote-data-1a481.appspot.com",
+  messagingSenderId: "163729674724",
+  appId: "1:163729674724:web:bbc79fc984aa3e991277f1",
+  measurementId: "G-TCGVQPXKDG"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const pollForm = document.getElementById('poll-form');
+  const pollQuestion = document.getElementById('poll-question');
+  const pollResults = document.getElementById('poll-results');
+  const pollContent = document.getElementById('poll-content');
+  const pollToggle = document.getElementById('poll-toggle');
+  const voteCooldownDays = 7;
+
+  pollToggle.onclick = () => {
+    pollContent.style.display = pollContent.style.display === 'block' ? 'none' : 'block';
+  };
+
+  const pollData = await fetch('/polls/current.json').then(res => res.json());
+  const pollId = pollData.pollId || 'default';
+  const options = pollData.options;
+
+  const votesRef = db.ref(`polls/${pollId}/votes`);
+  const userVotesRef = db.ref(`userVotes/${pollId}`);
+
+  pollQuestion.textContent = pollData.question;
+
+  firebase.auth().signInAnonymously().then((userCredential) => {
+    const userId = userCredential.user.uid;
+
+    userVotesRef.child(userId).once('value', snapshot => {
+      const userVote = snapshot.val();
+
+      if (userVote && userVote.hasVoted) {
+        pollForm.innerHTML = '';
+        pollResults.classList.remove('hidden');
+        votesRef.once('value', snap => {
+          const rawVotes = snap.val() || {};
+          const normalizedVotes = normalizeVotes(rawVotes, options);
+          const totalVotes = Object.values(normalizedVotes).reduce((sum, v) => sum + v, 0);
+          renderPollResults(options, normalizedVotes, totalVotes, pollResults);
+        });
+        return;
+      }
+
+      renderPollOptions(options, pollForm);
+
+      votesRef.on('value', snapshot => {
+        const rawVotes = snapshot.val() || {};
+        const votes = normalizeVotes(rawVotes, options);
+        const totalVotes = Object.values(votes).reduce((sum, v) => sum + v, 0);
+        renderPollResults(options, votes, totalVotes, pollResults);
+      });
+
+      const voteBtn = document.createElement('button');
+      voteBtn.textContent = 'Vote';
+      voteBtn.type = 'button';
+      voteBtn.onclick = () => handleVote(userId, options, votesRef, userVotesRef, pollForm);
+      pollForm.appendChild(voteBtn);
+    });
+  });
+
+  function normalizeVotes(rawVotes, options) {
+    const normalized = {};
+    if (Array.isArray(rawVotes)) {
+      for (const id of Object.keys(options)) {
+        const idx = parseInt(id, 10);
+        normalized[id] = typeof rawVotes[idx] === 'number' ? rawVotes[idx] : 0;
+      }
+    } else {
+      for (const id of Object.keys(options)) {
+        normalized[id] = typeof rawVotes[id] === 'number' ? rawVotes[id] : 0;
+      }
+    }
+    return normalized;
+  }
+
+  function renderPollOptions(options, pollForm) {
+    for (const [id, text] of Object.entries(options)) {
+      const optEl = document.createElement('div');
+      optEl.className = 'poll-option';
+      optEl.innerHTML = `
+        <label>
+          <input type="radio" name="poll-option" value="${id}"> ${text}
+        </label>`;
+      pollForm.appendChild(optEl);
+    }
+  }
+
+  function renderPollResults(options, votes, totalVotes, pollResults) {
+    pollResults.innerHTML = '';
+
+    if (totalVotes === 0) {
+      const noVotesMessage = document.createElement('div');
+      noVotesMessage.textContent = 'No votes yet.';
+      pollResults.appendChild(noVotesMessage);
+    } else {
+      for (const [id, text] of Object.entries(options)) {
+        const voteCount = votes[id] || 0;
+        const percent = totalVotes ? ((voteCount / totalVotes) * 100).toFixed(1) : 0;
+
+        const resultEl = document.createElement('div');
+        resultEl.innerHTML = `
+          <div>${text}: ${percent}% (${voteCount} votes)</div>
+          <div class="poll-results-bar">
+            <div class="poll-results-fill" style="width: ${percent}%"></div>
+          </div>`;
+        pollResults.appendChild(resultEl);
+      }
+    }
+  }
+
+  function handleVote(userId, options, votesRef, userVotesRef, pollForm) {
+    const selected = document.querySelector('input[name="poll-option"]:checked');
+    if (!selected) return alert("Please select an option.");
+
+    const voteRef = votesRef.child(selected.value);
+    voteRef.transaction(current => (typeof current === 'number' ? current + 1 : 1));
+
+    userVotesRef.child(userId).set({ hasVoted: true });
+
+    pollForm.innerHTML = '';
+    pollResults.classList.remove('hidden');
+  }
+});
