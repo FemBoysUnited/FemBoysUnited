@@ -1,11 +1,10 @@
 {
-  "pollId": "may-12",
-  "question": "Test Poll2",
+  "pollId": "femboy-test-001",
+  "question": "Who's your favorite femboy icon?",
   "options": {
-    "1": "Option 1",
-    "2": "Option 2",
-    "3": "Option 3",
-    "4": "Option 4",
-    "5": "Option 5"
+    "1": "Astolfo (Fate)",
+    "2": "Felix Argyle (Re:Zero)",
+    "3": "Bridget (Guilty Gear)",
+    "4": "Asta (Black Clover - femboy fan theory)"
   }
 }
