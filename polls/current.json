@@ -1,10 +1,12 @@
 {
-  "pollId": "femboy-test-001",
-  "question": "Who's your favorite femboy icon?",
+  "pollId": "anime-characters-001",
+  "question": "Which anime character's style do you admire the most?",
   "options": {
-    "1": "Astolfo (Fate)",
-    "2": "Felix Argyle (Re:Zero)",
-    "3": "Bridget (Guilty Gear)",
-    "4": "Asta (Black Clover - femboy fan theory)"
+    "1": "Roronoa Zoro (One Piece)",
+    "2": "Mikasa Ackerman (Attack on Titan)",
+    "3": "Yuno Gasai (Future Diary)",
+    "4": "Kageyama Tobio (Haikyuu!!)",
+    "5": "Lelouch vi Britannia (Code Geass)",
+    "6": "Shoto Todoroki (My Hero Academia)"
   }
 }
