@@ -145,7 +145,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pollResults = document.getElementById('poll-results');
   const pollContent = document.getElementById('poll-content');
   const pollToggle = document.getElementById('poll-toggle');
+
   const voteCooldownDays = 7;
+  const voteCooldownMs = voteCooldownDays * 24 * 60 * 60 * 1000;
 
   pollToggle.onclick = () => {
     pollContent.style.display = pollContent.style.display === 'block' ? 'none' : 'block';
@@ -165,52 +167,59 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     userVotesRef.child(userId).once('value', snapshot => {
       const userVote = snapshot.val();
+      const now = Date.now();
 
-      if (userVote && userVote.hasVoted) {
+      const hasVoted = userVote?.hasVoted;
+      const lastVoted = userVote?.lastVoted || 0;
+      const votedPollId = userVote?.pollId;
+
+      const cooldownActive = (now - lastVoted) < voteCooldownMs;
+
+      if (hasVoted && votedPollId === pollId && cooldownActive) {
         pollForm.innerHTML = '';
         pollResults.classList.remove('hidden');
-        votesRef.once('value', snap => {
-          const rawVotes = snap.val() || {};
-          const normalizedVotes = normalizeVotes(rawVotes, options);
-          const totalVotes = Object.values(normalizedVotes).reduce((sum, v) => sum + v, 0);
-          renderPollResults(options, normalizedVotes, totalVotes, pollResults);
+
+        votesRef.once('value', voteSnapshot => {
+          let votes = voteSnapshot.val() || [];
+          votes = Array.isArray(votes) ? votes : [];
+
+          const fullVotes = {};
+          Object.entries(options).forEach(([id]) => {
+            fullVotes[id] = votes[parseInt(id)] || 0;
+          });
+
+          const totalVotes = Object.values(fullVotes).reduce((sum, v) => sum + v, 0);
+          renderPollResults(options, fullVotes, totalVotes, pollResults);
         });
+
         return;
       }
 
-      renderPollOptions(options, pollForm);
+      renderPollOptions(options, votesRef, pollForm);
 
+      // Real-time update listener
       votesRef.on('value', snapshot => {
-        const rawVotes = snapshot.val() || {};
-        const votes = normalizeVotes(rawVotes, options);
-        const totalVotes = Object.values(votes).reduce((sum, v) => sum + v, 0);
-        renderPollResults(options, votes, totalVotes, pollResults);
+        let votes = snapshot.val() || [];
+        votes = Array.isArray(votes) ? votes : [];
+
+        const fullVotes = {};
+        Object.entries(options).forEach(([id]) => {
+          fullVotes[id] = votes[parseInt(id)] || 0;
+        });
+
+        const totalVotes = Object.values(fullVotes).reduce((sum, v) => sum + v, 0);
+        renderPollResults(options, fullVotes, totalVotes, pollResults);
       });
 
       const voteBtn = document.createElement('button');
       voteBtn.textContent = 'Vote';
       voteBtn.type = 'button';
-      voteBtn.onclick = () => handleVote(userId, options, votesRef, userVotesRef, pollForm);
+      voteBtn.onclick = () => handleVote(userId, options, votesRef, userVotesRef, pollId, pollForm);
       pollForm.appendChild(voteBtn);
     });
   });
 
-  function normalizeVotes(rawVotes, options) {
-    const normalized = {};
-    if (Array.isArray(rawVotes)) {
-      for (const id of Object.keys(options)) {
-        const idx = parseInt(id, 10);
-        normalized[id] = typeof rawVotes[idx] === 'number' ? rawVotes[idx] : 0;
-      }
-    } else {
-      for (const id of Object.keys(options)) {
-        normalized[id] = typeof rawVotes[id] === 'number' ? rawVotes[id] : 0;
-      }
-    }
-    return normalized;
-  }
-
-  function renderPollOptions(options, pollForm) {
+  function renderPollOptions(options, votesRef, pollForm) {
     for (const [id, text] of Object.entries(options)) {
       const optEl = document.createElement('div');
       optEl.className = 'poll-option';
@@ -245,14 +254,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  function handleVote(userId, options, votesRef, userVotesRef, pollForm) {
+  function handleVote(userId, options, votesRef, userVotesRef, pollId, pollForm) {
     const selected = document.querySelector('input[name="poll-option"]:checked');
     if (!selected) return alert("Please select an option.");
 
-    const voteRef = votesRef.child(selected.value);
-    voteRef.transaction(current => (typeof current === 'number' ? current + 1 : 1));
+    const selectedId = selected.value;
 
-    userVotesRef.child(userId).set({ hasVoted: true });
+    // Ensure array structure in Firebase
+    votesRef.once('value', snapshot => {
+      let votes = snapshot.val() || [];
+      if (!Array.isArray(votes)) votes = [];
+
+      const index = parseInt(selectedId);
+      while (votes.length <= index) votes.push(0);
+      votes[index] += 1;
+
+      votesRef.set(votes);
+    });
+
+    // Set user vote record with poll ID and timestamp
+    userVotesRef.child(userId).set({
+      hasVoted: true,
+      pollId: pollId,
+      lastVoted: Date.now()
+    });
 
     pollForm.innerHTML = '';
     pollResults.classList.remove('hidden');
