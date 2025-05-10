@@ -717,6 +717,13 @@ a:hover {
     }
 }
 
+@media (min-width: 769px) {
+    .sub-nav {
+        position: static !important;
+        top: auto !important;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .sub-nav {
