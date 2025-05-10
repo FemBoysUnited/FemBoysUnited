@@ -675,6 +675,7 @@ a:hover {
     padding: 15px 10px;
     display: flex;
     justify-content: center;
+	z-index: 500;
 }
 
 .sub-nav-container {
@@ -713,6 +714,21 @@ a:hover {
     .sub-bubble {
         font-size: 0.85rem;
         padding: 8px 12px;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sub-nav {
+        margin-top: 60px; /* Space it below the hamburger menu */
+    }
+
+    .hamburger {
+        z-index: 1100; /* Ensure hamburger icon stays on top */
+    }
+
+    .nav-links {
+        z-index: 1000; /* Ensure nav links stay above sub-nav */
     }
 }
 
@@ -952,4 +968,8 @@ a:hover {
 
 #poll-form button:hover {
   background-color: #e0559f;
+}
+
+html {
+  scroll-behavior: smooth;
 }

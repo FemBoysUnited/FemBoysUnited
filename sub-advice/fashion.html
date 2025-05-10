@@ -123,7 +123,18 @@
         <p>Fashion is a journey of self-discovery. Don’t rush it, take your time, experiment, and most importantly, have fun with it! Confidence comes from wearing what makes you feel amazing, so embrace your personal style!</p>
     </section>
 </main>
-
+<!-- Site Wide Poll Widget -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+<div id="poll-widget" class="poll-popup">
+  <button id="poll-toggle" class="poll-toggle-btn">🗳️ Vote</button>
+  <div class="poll-content" id="poll-content">
+    <h3 id="poll-question"></h3>
+    <form id="poll-form"></form>
+    <div id="poll-results" class="poll-results hidden"></div>
+  </div>
+</div>
 <!-- Footer -->
 <footer>
     <div class="footer-content">

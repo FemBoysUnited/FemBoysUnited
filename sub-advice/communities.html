@@ -109,7 +109,18 @@
         <p>Safe online communities are an essential part of the digital world, providing a space where you can grow, learn, and express yourself without fear of judgment or harassment. By choosing to participate in safe, supportive spaces, you're building your network of positive connections and embracing who you are. Always remember to engage respectfully and protect your privacy when navigating these spaces.</p>
     </section>
 </main>
-
+<!-- Site Wide Poll Widget -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+<div id="poll-widget" class="poll-popup">
+  <button id="poll-toggle" class="poll-toggle-btn">🗳️ Vote</button>
+  <div class="poll-content" id="poll-content">
+    <h3 id="poll-question"></h3>
+    <form id="poll-form"></form>
+    <div id="poll-results" class="poll-results hidden"></div>
+  </div>
+</div>
 <!-- Footer -->
 <footer>
     <div class="footer-content">

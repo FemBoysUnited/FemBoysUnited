@@ -283,3 +283,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     pollResults.classList.remove('hidden');
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the page contains an element with the class "advice-container"
+    const target = document.querySelector('.advice-container');
+
+    if (target) {
+        // Smoothly scroll to the element
+        setTimeout(function() {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 700);  // Delay for 700 milliseconds (adjust as needed)
+    }
+});
