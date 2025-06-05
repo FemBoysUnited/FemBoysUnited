@@ -1,12 +1,9 @@
 {
-  "pollId": "anime-characters-001",
-  "question": "Which anime character's style do you admire the most?",
+  "pollId": "random-question1",
+  "question": "Do you like FemBoysUnited??",
   "options": {
-    "1": "Roronoa Zoro (One Piece)",
-    "2": "Mikasa Ackerman (Attack on Titan)",
-    "3": "Yuno Gasai (Future Diary)",
-    "4": "Kageyama Tobio (Haikyuu!!)",
-    "5": "Lelouch vi Britannia (Code Geass)",
-    "6": "Shoto Todoroki (My Hero Academia)"
+    "1": "Absolutly yes!!!!! :DDD",
+    "2": "No (because im biased)",
+    "3": "Perchance",
   }
 }
